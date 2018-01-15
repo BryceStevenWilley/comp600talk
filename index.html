@@ -1,0 +1,340 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no minimal-ui">
+
+        <title>Optimization in Motion Planning</title>
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/material-blue.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <header style="position:absolute;top:3.5%;left:5%;z-index:500"><h2 style="font-size:6vh; border-bottom:solid white 1px;"></h2></header>
+            <footer style="position:absolute;bottom:5%;left:5%;z-index:500;"><h2 style="font-size:1vh"></h2></footer>
+            <div class="slides">
+                <!-- Setup for the title of each slide. -->
+                <section>
+                    <h2>Finding Optimal Robot Motion</h2>
+                    <br/>
+                    <h3 style="text-align:center;">Bryce Willey</h3>
+                    <h5>November 16th, 2017</h5>
+                    <img class="plain" style="max-height: 130px;"
+                         src="assets/RiceLogo-small.png" alt="The Rice University logo"></img>
+                </section>
+                <section data-state="header1">
+                    <style>.header1 header h2:after {content: "Motivation"; }</style>
+                    <div style="width:50%;float:left;">
+                        <img class="fragment" data-fragment-index="1"
+                             style="max-height:175px;width:auto;float:left;" 
+                             src="assets/dee-faught-arm.jpg" 
+                             alt="Dee Faught was built a robotic arm from Rice Students"></img>
+                        <!--img class="fragment" data-fragment-index="2"
+                             style="max-height:200px; width: auto; float: left;"
+                             src="assets/japan-fukushima-robot.jpg"></img-->
+                        <img class="fragment" data-fragment-index="3"
+                             style="max-height:175px;float:left;" 
+                             src="assets/Mars_Rover.jpg" 
+                             alt="The NASA Mars Exploration Rover (Artists Concept)"></img>
+                    </div>
+                    <div style="float:left; width:50%">
+                    <br/><p>Robots can...</p>
+                    <ul>
+                        <li class="fragment" data-fragment-index="1">assist people with disabilities/immobility</li><br/>
+                        <!--li class="fragment" data-fragment-index="2">complete tasks that are unsafe for humans</li><br/-->
+                        <li class="fragment" data-fragment-index="3">complete tasks that are unsafe or impossible for humans</li><br/>
+                    </ul>
+                    </div>
+                    <p class="fragment">Automating these tasks means allows widespread deployment</p>
+                    <p class="fragment">Motion planning is essential to automation.</p>
+                    <aside class="notes">
+                        Dee Faught (in the 1st picture) has osteogenesis imperfecta (brittle bone diease).
+                    </aside>
+                </section>
+                <section data-state="header2">
+                    <style>.header2 header h2:after {content: "Representing Robot Motion"; }</style>
+                    <section
+                        data-state="header2"
+                        data-background-image="assets/arm-0-0.svg"
+                        data-background-size="70%">
+                    </section>
+                    <section
+                        data-state="header2"
+                        data-background-image="assets/arm-1.svg"
+                        data-background-size="70%">
+                    </section>
+                    <section
+                        data-state="header2"
+                        data-background-image="assets/arm-2.svg"
+                        data-background-size="70%">
+                    </section>
+                    <section
+                        data-state="header2"
+                        data-background-image="assets/arm-cspace.svg"
+                        data-background-size="70%">
+                    </section>
+                </section>
+                <section data-state="header3">
+                    <style>.header3 header h2:after {content: "Motion Planning"; }</style>
+                    <div style="float: left; width: 45%; border-right: 2px solid white; padding:1vh;">
+                        <h4 class="fragment" data-fragment-index="1">Feasible Motion Planning</h4>
+                        <img class="plain fragment" data-fragment-index="1" style="max-height:150px; margin:5px;" src="assets/feasible-path.svg"></img>
+                        <ul>
+                            <li class="fragment" data-fragment-index="2">Finds a connected path from start to goal</li>
+                            <li class="fragment" data-fragment-index="2">Doesn't collide with any obstacles</li>
+                        </ul>
+                    </div>
+                    <div style="float: left; width: 45%; padding-left: 2.5vh; padding-top: 1vh;">
+                        <h4 class="fragment" data-fragment-index="3">Optimal Motion Planning</h4>
+                        <img class="plain fragment" data-fragment-index="3" style="max-height:150px;" src="assets/optimal-path.svg"></img>
+                        <ul>
+                            <li class="fragment" data-fragment-index="4">Assigns a cost to every path</li>
+                            <li class="fragment" data-fragment-index="4">Finds a feasible path that minimizes the cost</li>
+                        </ul>
+                    </div>
+                </section>
+                <section data-state="header4">
+                    <style>.header4 header h2:after {content: "Sampling Planners"; }</style>
+                    <div style="float: left; width:45%">
+                    <img class="plain" style="float: top; max-height: 250px;" src="assets/rrt-3-5-again.svg"></img>
+                    <img class="plain" style="float: bottom; max-height: 250px;" src="assets/rrt-6-full-tree.svg"></img>
+                    </div>
+                    <div style="float: right; width: 45%">
+                        <h4>Pros</h4>
+                        <ul>
+                            <li>If a solution exists, it will be found</li>
+                            <li>Very reliable</li>
+                            <li>Can find optimal paths</li>
+                            <!--li>Conceptually simple</li-->
+                            <!--li>Generalizable</li-->
+                        </ul>
+                        <br/><br/>
+
+                        <h4>Cons</h4>
+                        <ul>
+                            <li>Must smooth the path after finding it</li>
+                            <li>Finding optimal paths is time consuming</li>
+                            <!--li>Can't conclusively say "there is no solution"</li-->
+                        </ul>
+                    </div>
+                </section>
+                <section data-state="header5">
+                    <style>.header5 header h2:after {content: "Optimization Planners"; }</style>
+                    <div style="float: left; width:45%">
+                    <img class="plain" style="float: top; max-height: 250px;" src="assets/opt-4-next-iter.svg"></img>
+                    <img class="plain" style="float: bottom; max-height: 250px;" src="assets/opt-7.svg"></img>
+                    </div>
+                    <div style="float: right; width: 45%">
+                            <h4>Pros</h4>
+                            <ul>
+                                <li>Fast! (5-10x by our experiments)</li>
+                                <li>Quality, smooth paths</li>
+                            </ul>
+                        <br/><br/>
+
+                            <h4>Cons</h4>
+                            <ul>
+                                <!--li>Paths aren't globally optimal</li-->
+                                <!--li>Robot specific</li-->
+                                <li>No guarantee of finding a feasible path</li>
+                                <li>Not as reliable as sampling planners</li>
+                            </ul>
+                    </div>
+                </section>
+                <section data-state="header7">
+                    <style>.header7 header h2:after {content: "Problem: Comparing Apples and Oranges"; }</style>
+                    <p>Currently, no rigorous comparisons in the literature</p>
+                    <p>Optimization planners do special 'tricks' to speed up planning</p>
+                    <p>What really makes optimization planners faster?</p>
+                </section>
+                <section data-state="header6">
+                    <style>.header6 header h2:after {content: "Results: A Specific Comparison"; }</style>
+                    <style>.header6-1 header h2:after {content: "Results: An Optimization Planner"; }</style>
+                    <style>.header6-2 header h2:after {content: "Results: A Sampling Planner"; }</style>
+                    <style>.header6-3 header h2:after {content: "Results: Data"; }</style>
+                    <style>.header6-4 header h2:after {content: "Results: When Optimizers fail"; }</style>
+                    <section data-state="header6">
+                        <div style="float: top; height: 100%;">
+                            <img style="max-height:350px; width: auto; background-color:rgba(0, 0, 0, 0.0); border:none; box-shadow:none;" src="assets/lab-b.png"></img>
+                            <img style="max-height:350px; width: auto; background-color:rgba(0, 0, 0, 0.0); border:none; box-shadow:none;" src="assets/lab-e.png"></img>
+                        </div>
+                    </section>
+                    <section data-state="header6-3">
+                        <img class="plain" style="width: 45%; padding: 5px;" src="assets/planning-time.svg"></img>
+                        <img class="plain" style="width: 45%; padding: 5px;" src="assets/distance.svg">
+                    </section>
+                    <section data-state="header6-2"
+                        data-background-video="assets/RRT-weird.mp4"
+                        data-background-video-loop
+                        data-background-video-mute
+                        data-background-size="contain">
+                    </section>
+                    <section data-state="header6-1"
+                        data-background-video="assets/Traj Opt Good.mp4"
+                        data-background-video-loop
+                        data-background-video-muted
+                        data-background-size="contain">
+                    </section>
+                    <section data-state="header6-4"
+                        data-background-video="assets/chomp-weird.mp4"
+                        data-background-video-loop
+                        data-background-video-muted
+                        data-background-size="contain">
+                    </section>
+                    <aside class="notes">
+                      Surprisingly, there haven't been any good comparisons in the literature.
+                    </aside>
+                </section>
+                <section data-state="header8">
+                    <style>.header8 header h2:after {content: "Future Work"; }</style>
+                    <p class="fragment">Abstract the 'tricks' from the planners</p><br/>
+                    <p class="fragment">Test on a wider variety of planning problems</p><br/>
+                    <p class="fragment">Use sampling and optimization together: quality motion and faster convergence</p>
+                </section>
+                <section data-state="header9">
+                    <style>.header9 header h2:after {content: "Conclusion"; }</style>
+                    <div>
+                        <img class="plain" style="max-height:200px; padding-right: 10vh;" src="assets/rrt-6-full-tree.svg"></img>
+                        <img class="plain" style="max-height:200px;" src="assets/opt-4-next-iter.svg"></img>
+                    </div>
+                    <p>Sampling planners and optimization planners both have pros and cons</p>
+                    <p>Optimization Planners are still not reliable enough to be used safely</p>
+                </section>
+                <section>
+                    <h1>Bonus Animations</h1>
+                </section>
+                <section data-state="header4">
+                    <!-- Note for future: try data-background-size:"contain", 
+                         and just adjust the image size to give top and bottom clearance. -->
+                    <style>.header4 header h2:after {content: "Sampling Planners"; }</style>
+                    <section
+                        data-state="header4"
+                        data-background-image="assets/start-1.svg"
+                        data-background-size="contain">
+                    </section>
+                    <section
+                        data-state="header4"
+                        data-background-image="assets/rrt-2-sample.svg"
+                        data-background-size="contain">
+                    </section>
+                    <section
+                        data-state="header4"
+                        data-background-image="assets/rrt-3-extend.svg"
+                        data-background-size="contain">
+                    </section>
+                    <section
+                        data-state="header4"
+                        data-background-image="assets/rrt-3-5-again.svg"
+                        data-background-size="contain">
+                    </section>
+                    <section
+                        data-state="header4"
+                        data-background-image="assets/rrt-4-grow.svg"
+                        data-background-size="contain">
+                    </section>
+                    <section
+                        data-state="header4"
+                        data-background-image="assets/rrt-5-collision.svg"
+                        data-background-size="contain">
+                    </section>
+                    <section
+                        data-state="header4"
+                        data-background-image="assets/rrt-6-full-tree.svg"
+                        data-background-size="contain">
+                    </section>
+                    <section
+                        data-state="header4"
+                        data-background-image="assets/rrt-7-final-path.svg"
+                        data-background-size="contain">
+                    </section>
+                </section>
+                <section data-state="header5">
+                    <style>.header5 header h2:after {content: "Optimization Planners"; }</style>
+                    <section
+                        data-state="header5"
+                        data-background-image="assets/start-1.svg"
+                        data-background-size="contain">
+                    </section>
+                    <section
+                        data-state="header5"
+                        data-background-image="assets/opt-2-init.svg"
+                        data-background-size="contain">
+                    </section>
+                    <section
+                        data-state="header5"
+                        data-background-image="assets/opt-3-gradients.svg"
+                        data-background-size="contain">
+                    </section>
+                    <section
+                        data-state="header5"
+                        data-background-image="assets/opt-4-next-iter.svg"
+                        data-background-size="contain">
+                    </section>
+                    <section
+                        data-state="header5"
+                        data-background-image="assets/opt-5.svg"
+                        data-background-size="contain">
+                    </section>
+                    <section
+                        data-state="header5"
+                        data-background-image="assets/opt-6.svg"
+                        data-background-size="contain">
+                    </section>
+                    <section
+                        data-state="header5"
+                        data-background-image="assets/opt-7.svg"
+                        data-background-size="contain">
+                    </section>
+                </section>
+
+            </div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/math/math.js', async: true}
+                ],
+                math: {
+		            mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+		            config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+	            },
+                transition: 'none',
+                transitionSpeed: 'fast',
+                controls: true,
+                progress: true,
+                slideNumber: true
+                /*history: true */
+            });
+            Reveal.configure({
+                keyboard: {
+                    39: 'next',
+                    37: 'prev'
+                }
+            });
+        </script>
+    </body>
+</html>
