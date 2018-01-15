@@ -31,7 +31,7 @@
                     <h2>Finding Optimal Robot Motion</h2>
                     <br/>
                     <h3 style="text-align:center;">Bryce Willey</h3>
-                    <h5>November 16th, 2017</h5>
+                    <h5>January 22th, 2018</h5>
                     <img class="plain" style="max-height: 130px;"
                          src="assets/RiceLogo-small.png" alt="The Rice University logo"></img>
                 </section>
@@ -107,116 +107,6 @@
                     </div>
                 </section>
                 <section data-state="header4">
-                    <style>.header4 header h2:after {content: "Sampling Planners"; }</style>
-                    <div style="float: left; width:45%">
-                    <img class="plain" style="float: top; max-height: 250px;" src="assets/rrt-3-5-again.svg"></img>
-                    <img class="plain" style="float: bottom; max-height: 250px;" src="assets/rrt-6-full-tree.svg"></img>
-                    </div>
-                    <div style="float: right; width: 45%">
-                        <h4>Pros</h4>
-                        <ul>
-                            <li>If a solution exists, it will be found</li>
-                            <li>Very reliable</li>
-                            <li>Can find optimal paths</li>
-                            <!--li>Conceptually simple</li-->
-                            <!--li>Generalizable</li-->
-                        </ul>
-                        <br/><br/>
-
-                        <h4>Cons</h4>
-                        <ul>
-                            <li>Must smooth the path after finding it</li>
-                            <li>Finding optimal paths is time consuming</li>
-                            <!--li>Can't conclusively say "there is no solution"</li-->
-                        </ul>
-                    </div>
-                </section>
-                <section data-state="header5">
-                    <style>.header5 header h2:after {content: "Optimization Planners"; }</style>
-                    <div style="float: left; width:45%">
-                    <img class="plain" style="float: top; max-height: 250px;" src="assets/opt-4-next-iter.svg"></img>
-                    <img class="plain" style="float: bottom; max-height: 250px;" src="assets/opt-7.svg"></img>
-                    </div>
-                    <div style="float: right; width: 45%">
-                            <h4>Pros</h4>
-                            <ul>
-                                <li>Fast! (5-10x by our experiments)</li>
-                                <li>Quality, smooth paths</li>
-                            </ul>
-                        <br/><br/>
-
-                            <h4>Cons</h4>
-                            <ul>
-                                <!--li>Paths aren't globally optimal</li-->
-                                <!--li>Robot specific</li-->
-                                <li>No guarantee of finding a feasible path</li>
-                                <li>Not as reliable as sampling planners</li>
-                            </ul>
-                    </div>
-                </section>
-                <section data-state="header7">
-                    <style>.header7 header h2:after {content: "Problem: Comparing Apples and Oranges"; }</style>
-                    <p>Currently, no rigorous comparisons in the literature</p>
-                    <p>Optimization planners do special 'tricks' to speed up planning</p>
-                    <p>What really makes optimization planners faster?</p>
-                </section>
-                <section data-state="header6">
-                    <style>.header6 header h2:after {content: "Results: A Specific Comparison"; }</style>
-                    <style>.header6-1 header h2:after {content: "Results: An Optimization Planner"; }</style>
-                    <style>.header6-2 header h2:after {content: "Results: A Sampling Planner"; }</style>
-                    <style>.header6-3 header h2:after {content: "Results: Data"; }</style>
-                    <style>.header6-4 header h2:after {content: "Results: When Optimizers fail"; }</style>
-                    <section data-state="header6">
-                        <div style="float: top; height: 100%;">
-                            <img style="max-height:350px; width: auto; background-color:rgba(0, 0, 0, 0.0); border:none; box-shadow:none;" src="assets/lab-b.png"></img>
-                            <img style="max-height:350px; width: auto; background-color:rgba(0, 0, 0, 0.0); border:none; box-shadow:none;" src="assets/lab-e.png"></img>
-                        </div>
-                    </section>
-                    <section data-state="header6-3">
-                        <img class="plain" style="width: 45%; padding: 5px;" src="assets/planning-time.svg"></img>
-                        <img class="plain" style="width: 45%; padding: 5px;" src="assets/distance.svg">
-                    </section>
-                    <section data-state="header6-2"
-                        data-background-video="assets/RRT-weird.mp4"
-                        data-background-video-loop
-                        data-background-video-mute
-                        data-background-size="contain">
-                    </section>
-                    <section data-state="header6-1"
-                        data-background-video="assets/Traj Opt Good.mp4"
-                        data-background-video-loop
-                        data-background-video-muted
-                        data-background-size="contain">
-                    </section>
-                    <section data-state="header6-4"
-                        data-background-video="assets/chomp-weird.mp4"
-                        data-background-video-loop
-                        data-background-video-muted
-                        data-background-size="contain">
-                    </section>
-                    <aside class="notes">
-                      Surprisingly, there haven't been any good comparisons in the literature.
-                    </aside>
-                </section>
-                <section data-state="header8">
-                    <style>.header8 header h2:after {content: "Future Work"; }</style>
-                    <p class="fragment">Abstract the 'tricks' from the planners</p><br/>
-                    <p class="fragment">Test on a wider variety of planning problems</p><br/>
-                    <p class="fragment">Use sampling and optimization together: quality motion and faster convergence</p>
-                </section>
-                <section data-state="header9">
-                    <style>.header9 header h2:after {content: "Conclusion"; }</style>
-                    <div>
-                        <img class="plain" style="max-height:200px; padding-right: 10vh;" src="assets/rrt-6-full-tree.svg"></img>
-                        <img class="plain" style="max-height:200px;" src="assets/opt-4-next-iter.svg"></img>
-                    </div>
-                    <p>Sampling planners and optimization planners both have pros and cons</p>
-                    <p>Optimization Planners are still not reliable enough to be used safely</p>
-                </section>
-                <section>
-                    <h1>Bonus Animations</h1>
-                </section>
-                <section data-state="header4">
                     <!-- Note for future: try data-background-size:"contain", 
                          and just adjust the image size to give top and bottom clearance. -->
                     <style>.header4 header h2:after {content: "Sampling Planners"; }</style>
@@ -262,44 +152,192 @@
                     </section>
                 </section>
                 <section data-state="header5">
-                    <style>.header5 header h2:after {content: "Optimization Planners"; }</style>
+                    <!-- TODO: cite some sampling papers -->
+                    <style>.header5 header h2:after {content: "Sampling Planners"; }</style>
+                    <div style="float: left; width:45%">
+                    <img class="plain" style="float: top; max-height: 250px;" src="assets/rrt-3-5-again.svg"></img>
+                    <img class="plain" style="float: bottom; max-height: 250px;" src="assets/rrt-6-full-tree.svg"></img>
+                    </div>
+                    <div style="float: right; width: 45%">
+                        <h4>Pros</h4>
+                        <ul>
+                            <li>If a solution exists, it will be found</li>
+                            <li>Very reliable</li>
+                            <li>Can find optimal paths</li>
+                            <!--li>Conceptually simple</li-->
+                            <!--li>Generalizable</li-->
+                        </ul>
+                        <br/><br/>
+
+                        <h4>Cons</h4>
+                        <ul>
+                            <li>Must smooth the path after finding it</li>
+                            <li>Finding optimal paths is time consuming</li>
+                            <!--li>Can't conclusively say "there is no solution"</li-->
+                        </ul>
+                    </div>
+                </section>
+                <section data-state="header6">
+                    <style>.header6 header h2:after {content: "Optimization Planners"; }</style>
                     <section
-                        data-state="header5"
+                        data-state="header6"
                         data-background-image="assets/start-1.svg"
                         data-background-size="contain">
                     </section>
                     <section
-                        data-state="header5"
+                        data-state="header6"
                         data-background-image="assets/opt-2-init.svg"
                         data-background-size="contain">
                     </section>
                     <section
-                        data-state="header5"
+                        data-state="header6"
                         data-background-image="assets/opt-3-gradients.svg"
                         data-background-size="contain">
                     </section>
                     <section
-                        data-state="header5"
+                        data-state="header6"
                         data-background-image="assets/opt-4-next-iter.svg"
                         data-background-size="contain">
                     </section>
                     <section
-                        data-state="header5"
+                        data-state="header6"
                         data-background-image="assets/opt-5.svg"
                         data-background-size="contain">
                     </section>
                     <section
-                        data-state="header5"
+                        data-state="header6"
                         data-background-image="assets/opt-6.svg"
                         data-background-size="contain">
                     </section>
                     <section
-                        data-state="header5"
+                        data-state="header6"
                         data-background-image="assets/opt-7.svg"
                         data-background-size="contain">
                     </section>
                 </section>
 
+                <section data-state="header7">
+                    <!-- TODO: cite some optimization planner papers -->
+                    <style>.header7 header h2:after {content: "Optimization Planners"; }</style>
+                    <div style="float: left; width:45%">
+                    <img class="plain" style="float: top; max-height: 250px;" src="assets/opt-4-next-iter.svg"></img>
+                    <img class="plain" style="float: bottom; max-height: 250px;" src="assets/opt-7.svg"></img>
+                    </div>
+                    <div style="float: right; width: 45%">
+                            <h4>Pros</h4>
+                            <ul>
+                                <li>Fast! (5-10x by our experiments)</li>
+                                <li>Quality, smooth paths</li>
+                            </ul>
+                        <br/><br/>
+
+                            <h4>Cons</h4>
+                            <ul>
+                                <!--li>Paths aren't globally optimal</li-->
+                                <!--li>Robot specific</li-->
+                                <li>No guarantee of finding a feasible path</li>
+                                <li>Not as reliable as sampling planners</li>
+                            </ul>
+                    </div>
+                </section>
+                <section data-state="header8">
+                    <style>.header8 header h2:after {content: "Problem: Comparing Apples and Oranges"; }</style>
+                    <p>Currently, no rigorous comparisons in the literature</p>
+                    <p>Optimization planners do special 'tricks' to speed up planning</p>
+                    <p>What really makes optimization planners faster?</p>
+                </section>
+                <section data-state="header8-0">
+                    <style>.header8-0 header h2:after {content: "Signed Distance Fields";}</style>
+                    <div style="width:45%; float:left;">
+                        <ul>
+                            <li>Discretizes 3D space into a fine grid</li>
+                            <li>Calculates distance from each cell to closest obstacle border</li>
+                            <ul>
+                              <li>> 0 if the cell lies outside of the obstacle</li>
+                              <li>< 0 if the cell is inside an obstacle</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div style="width:45%;float:right;">
+                            <!-- TODO: replace with my own figures. -->
+                            <img style="max-height:175px;width:auto;float:left;" 
+                                 src="assets/sdf.png" 
+                                 alt="TODO"></img>
+                            <!--img class="fragment" data-fragment-index="2"
+                                 style="max-height:200px; width: auto; float: left;"
+                                 src="assets/japan-fukushima-robot.jpg"></img-->
+                            <img style="max-height:175px;float:left;" 
+                                 src="assets/toolsdf.png" 
+                                 alt="TODO"></img>
+                        </div>
+                </section>
+                <section data-state="header8-1">
+                    <div style="width:60%;float:left;">
+                      <style>.header8-1 header h2:after {content: "Collision Checking in Motion Planning";}</style>
+                      <p>Usually done precisely using collision libraries (FCL, Bullet, etc)</p>
+                      <p>Can be approximated using signed distance fields</p>
+                      <p>Approximating the robot using spheres makes getting collision information easier</p>
+                    </div>
+                    <div style="width:35%;float:right;">
+                        <img style="max-height:350px;float:right;"
+                            src="assets/robotsdf.png"
+                            alt="TODO"></img>
+                    </div>
+                    
+                </section>
+                <section data-state="header9">
+                    <style>.header9 header h2:after {content: "Results: A Specific Comparison"; }</style>
+                    <style>.header9-1 header h2:after {content: "Results: An Optimization Planner"; }</style>
+                    <style>.header9-2 header h2:after {content: "Results: A Sampling Planner"; }</style>
+                    <style>.header9-3 header h2:after {content: "Results: Data"; }</style>
+                    <style>.header9-4 header h2:after {content: "Results: When Optimizers fail"; }</style>
+                    <section data-state="header6">
+                        <div style="float: top; height: 100%;">
+                            <img style="max-height:350px; width: auto; background-color:rgba(0, 0, 0, 0.0); border:none; box-shadow:none;" src="assets/lab-b.png"></img>
+                            <img style="max-height:350px; width: auto; background-color:rgba(0, 0, 0, 0.0); border:none; box-shadow:none;" src="assets/lab-e.png"></img>
+                        </div>
+                    </section>
+                    <section data-state="header9-3">
+                        <img class="plain" style="width: 45%; padding: 5px;" src="assets/planning-time.svg"></img>
+                        <img class="plain" style="width: 45%; padding: 5px;" src="assets/distance.svg">
+                    </section>
+                    <section data-state="header9-2"
+                        data-background-video="assets/RRT-weird.mp4"
+                        data-background-video-loop
+                        data-background-video-mute
+                        data-background-size="contain">
+                    </section>
+                    <section data-state="header9-1"
+                        data-background-video="assets/Traj Opt Good.mp4"
+                        data-background-video-loop
+                        data-background-video-muted
+                        data-background-size="contain">
+                    </section>
+                    <section data-state="header9-4"
+                        data-background-video="assets/chomp-weird.mp4"
+                        data-background-video-loop
+                        data-background-video-muted
+                        data-background-size="contain">
+                    </section>
+                    <aside class="notes">
+                      Surprisingly, there haven't been any good comparisons in the literature.
+                    </aside>
+                </section>
+                <section data-state="header10">
+                    <style>.header10 header h2:after {content: "Current Work"; }</style>
+                    <p class="fragment">Abstract the 'tricks' from the planners</p><br/>
+                    <p class="fragment">Test on a wider variety of planning problems</p><br/>
+                    <p class="fragment">Future Work: Use sampling and optimization together: quality motion and faster convergence</p>
+                </section>
+                <section data-state="header11">
+                    <style>.header11 header h2:after {content: "Conclusion"; }</style>
+                    <div>
+                        <img class="plain" style="max-height:200px; padding-right: 10vh;" src="assets/rrt-6-full-tree.svg"></img>
+                        <img class="plain" style="max-height:200px;" src="assets/opt-4-next-iter.svg"></img>
+                    </div>
+                    <p>Sampling planners and optimization planners both have pros and cons</p>
+                    <p>The sources of optimization speed ups is still unclear</p>
+                </section>
             </div>
         </div>
 
@@ -326,8 +364,8 @@
                 transitionSpeed: 'fast',
                 controls: true,
                 progress: true,
-                slideNumber: true
-                /*history: true */
+                slideNumber: true,
+                history: true
             });
             Reveal.configure({
                 keyboard: {
