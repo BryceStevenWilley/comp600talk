@@ -29,6 +29,10 @@ $linkColor: #ff4081;
 $linkColorHover: lighten( $linkColor, 20% );
 $selectionBackgroundColor: #ff4081;
 
+$headingLineHeight: 1.3;
+$headingFontWeight: bold;
+$headingTextTransform: none;
+
 // Fix links so they are not cut off
 .reveal a {
 	line-height: 1.3em;

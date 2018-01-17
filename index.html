@@ -23,7 +23,7 @@
     </head>
     <body>
         <div class="reveal">
-            <header style="position:absolute;top:3.5%;left:5%;z-index:500"><h2 style="font-size:6vh; border-bottom:solid white 1px;"></h2></header>
+            <header style="position:absolute;top:2.6%;left:5%;z-index:500"><h2 style="font-size:5.7vh; border-bottom:solid white 1px;"></h2></header>
             <footer style="position:absolute;bottom:5%;left:5%;z-index:500;"><h2 style="font-size:1vh"></h2></footer>
             <div class="slides">
                 <!-- Setup for the title of each slide. -->
@@ -39,14 +39,14 @@
                     <style>.header1 header h2:after {content: "Motivation"; }</style>
                     <div style="width:50%;float:left;">
                         <img class="fragment" data-fragment-index="1"
-                             style="max-height:175px;width:auto;float:left;" 
+                             style="max-height:190px;width:auto;float:none;" 
                              src="assets/dee-faught-arm.jpg" 
                              alt="Dee Faught was built a robotic arm from Rice Students"></img>
                         <!--img class="fragment" data-fragment-index="2"
                              style="max-height:200px; width: auto; float: left;"
                              src="assets/japan-fukushima-robot.jpg"></img-->
                         <img class="fragment" data-fragment-index="3"
-                             style="max-height:175px;float:left;" 
+                             style="max-height:190px;float:none;" 
                              src="assets/Mars_Rover.jpg" 
                              alt="The NASA Mars Exploration Rover (Artists Concept)"></img>
                     </div>
@@ -57,9 +57,11 @@
                         <!--li class="fragment" data-fragment-index="2">complete tasks that are unsafe for humans</li><br/-->
                         <li class="fragment" data-fragment-index="3">complete tasks that are unsafe or impossible for humans</li><br/>
                     </ul>
+                    <br/>
+                    <br/>
                     </div>
-                    <p class="fragment">Automating these tasks means allows widespread deployment</p>
-                    <p class="fragment">Motion planning is essential to automation.</p>
+                        <p class="fragment" style="float:bottom">Automating these tasks allows widespread deployment</p>
+                        <p class="fragment">Motion planning is essential to automation.</p>
                     <aside class="notes">
                         Dee Faught (in the 1st picture) has osteogenesis imperfecta (brittle bone diease).
                     </aside>
@@ -91,7 +93,7 @@
                     <style>.header3 header h2:after {content: "Motion Planning"; }</style>
                     <div style="float: left; width: 45%; border-right: 2px solid white; padding:1vh;">
                         <h4 class="fragment" data-fragment-index="1">Feasible Motion Planning</h4>
-                        <img class="plain fragment" data-fragment-index="1" style="max-height:150px; margin:5px;" src="assets/feasible-path.svg"></img>
+                        <img class="plain fragment" data-fragment-index="1" style="max-height:210px; margin:5px;" src="assets/feasible-path.svg"></img>
                         <ul>
                             <li class="fragment" data-fragment-index="2">Finds a connected path from start to goal</li>
                             <li class="fragment" data-fragment-index="2">Doesn't collide with any obstacles</li>
@@ -99,7 +101,7 @@
                     </div>
                     <div style="float: left; width: 45%; padding-left: 2.5vh; padding-top: 1vh;">
                         <h4 class="fragment" data-fragment-index="3">Optimal Motion Planning</h4>
-                        <img class="plain fragment" data-fragment-index="3" style="max-height:150px;" src="assets/optimal-path.svg"></img>
+                        <img class="plain fragment" data-fragment-index="3" style="max-height:210px;" src="assets/optimal-path.svg"></img>
                         <ul>
                             <li class="fragment" data-fragment-index="4">Assigns a cost to every path</li>
                             <li class="fragment" data-fragment-index="4">Finds a feasible path that minimizes the cost</li>
@@ -248,7 +250,7 @@
                 </section>
                 <section data-state="header8-0">
                     <style>.header8-0 header h2:after {content: "Signed Distance Fields";}</style>
-                    <div style="width:45%; float:left;">
+                    <div style="float:left;">
                         <ul>
                             <li>Discretizes 3D space into a fine grid</li>
                             <li>Calculates distance from each cell to closest obstacle border</li>
@@ -258,17 +260,15 @@
                             </ul>
                         </ul>
                     </div>
-                    <div style="width:45%;float:right;">
+                    <div style="float:bottom;">
                             <!-- TODO: replace with my own figures. -->
-                            <img style="max-height:175px;width:auto;float:left;" 
+                            <img style="max-height:300px;width:auto;float:left;" 
+                                 class="plain"
+                                 src="assets/outputName.gif" 
+                                 alt="TODO"></img>
+                            <!--img style="max-height:125px;float:left;" 
                                  src="assets/sdf.png" 
-                                 alt="TODO"></img>
-                            <!--img class="fragment" data-fragment-index="2"
-                                 style="max-height:200px; width: auto; float: left;"
-                                 src="assets/japan-fukushima-robot.jpg"></img-->
-                            <img style="max-height:175px;float:left;" 
-                                 src="assets/toolsdf.png" 
-                                 alt="TODO"></img>
+                                 alt="TODO"></img-->
                         </div>
                 </section>
                 <section data-state="header8-1">
