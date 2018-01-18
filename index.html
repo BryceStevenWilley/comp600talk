@@ -37,34 +37,47 @@
                 </section>
                 <section data-state="header1">
                     <style>.header1 header h2:after {content: "Motivation"; }</style>
-                    <div style="width:50%;float:left;">
-                        <img class="fragment" data-fragment-index="1"
-                             style="max-height:190px;width:auto;float:none;" 
-                             src="assets/dee-faught-arm.jpg" 
-                             alt="Dee Faught was built a robotic arm from Rice Students"></img>
-                        <!--img class="fragment" data-fragment-index="2"
-                             style="max-height:200px; width: auto; float: left;"
-                             src="assets/japan-fukushima-robot.jpg"></img-->
-                        <img class="fragment" data-fragment-index="3"
-                             style="max-height:190px;float:none;" 
-                             src="assets/Mars_Rover.jpg" 
-                             alt="The NASA Mars Exploration Rover (Artists Concept)"></img>
-                    </div>
-                    <div style="float:left; width:50%">
-                    <br/><p>Robots can...</p>
-                    <ul>
-                        <li class="fragment" data-fragment-index="1">assist people with disabilities/immobility</li><br/>
-                        <!--li class="fragment" data-fragment-index="2">complete tasks that are unsafe for humans</li><br/-->
-                        <li class="fragment" data-fragment-index="3">complete tasks that are unsafe or impossible for humans</li><br/>
-                    </ul>
-                    <br/>
-                    <br/>
-                    </div>
-                        <p class="fragment" style="float:bottom">Automating these tasks allows widespread deployment</p>
-                        <p class="fragment">Motion planning is essential to automation.</p>
-                    <aside class="notes">
-                        Dee Faught (in the 1st picture) has osteogenesis imperfecta (brittle bone diease).
-                    </aside>
+                    <section>
+                        <div style="width:50%;float:left;">
+                            <img class="fragment" data-fragment-index="1"
+                                 style="max-height:190px;width:auto;float:none;" 
+                                 src="assets/dee-faught-arm.jpg" 
+                                 alt="Dee Faught was built a robotic arm from Rice Students"></img>
+                            <img class="fragment" data-fragment-index="3"
+                                 style="max-height:190px; width: auto; float: left;"
+                                 src="assets/japan-fukushima-robot.jpg"></img>
+                            <img class="fragment" data-fragment-index="3"
+                                 style="max-height:190px;float:none;" 
+                                 src="assets/Mars_Rover.jpg" 
+                                 alt="The NASA Mars Exploration Rover (Artists Concept)"></img>
+                        </div>
+                        <div style="float:left; width:50%">
+                        <br/><p>Benefits of Robots:</p>
+                        <ul>
+                            <li class="fragment" data-fragment-index="1">can assist people with disabilities/immobility</li><br/>
+                            <!--li class="fragment" data-fragment-index="2">complete tasks that are unsafe for humans</li><br/-->
+                            <li class="fragment" data-fragment-index="3">can complete tasks that are unsafe or impossible for humans</li><br/>
+                        </ul>
+                        <br/>
+                        <br/>
+                        </div>
+                        <aside class="notes">
+                            Dee Faught (in the 1st picture) has osteogenesis imperfecta (brittle bone diease).
+                        </aside>
+                    </section>
+                    <section>
+                        <p>
+                            To reliably use robots in uncontrolled environments, teleoperation is the current best choice
+                        </p>
+                        <img style="max-height:250px;width:auto;float:none;" 
+                             src="assets/dee-faught-arm-circle.jpg" 
+                             alt="Dee Faught has to control the robotic arm himself with a controller"></img>
+                            <ul>
+                                <li class="fragment" data-fragment-index="1">Limits deployment to skilled operators</li>
+                            </ul>
+                        <p class="fragment" data-fragment-index="2">Automating these tasks allows widespread deployment</p>
+                        <p class="fragment" data-fragment-index="3">Motion planning is essential to automation.</p>
+                    </section>
                 </section>
                 <section data-state="header2">
                     <style>.header2 header h2:after {content: "Representing Robot Motion"; }</style>
@@ -365,7 +378,8 @@
                 controls: true,
                 progress: true,
                 slideNumber: true,
-                history: true
+                history: true,
+                mouseWheel: true
             });
             Reveal.configure({
                 keyboard: {
