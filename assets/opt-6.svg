@@ -28,7 +28,7 @@
        inkscape:stockid="TriangleOutL">
       <path
          transform="scale(0.8)"
-         style="fill:#ff4081;fill-opacity:1;fill-rule:evenodd;stroke:#ff4081;stroke-width:1.00000003pt;stroke-opacity:1"
+         style="fill:#fde725;fill-opacity:1;fill-rule:evenodd;stroke:#fde725;stroke-width:1.00000003pt;stroke-opacity:1"
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path4002"
          inkscape:connector-curvature="0" />
@@ -45,7 +45,7 @@
       <path
          id="path3839"
          d="M 5.77,0 -2.88,5 V -5 Z"
-         style="fill:#ff4081;fill-opacity:1;fill-rule:evenodd;stroke:#ff4081;stroke-width:1.00000003pt;stroke-opacity:1"
+         style="fill:#fde725;fill-opacity:1;fill-rule:evenodd;stroke:#fde725;stroke-width:1.00000003pt;stroke-opacity:1"
          transform="scale(0.8)"
          inkscape:connector-curvature="0" />
     </marker>
@@ -118,9 +118,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="274.06047"
-     inkscape:cy="363.06441"
+     inkscape:zoom="1.979899"
+     inkscape:cx="288.4175"
+     inkscape:cy="333.18951"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -144,7 +144,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -154,7 +154,7 @@
      id="layer1"
      transform="translate(-0.89917596,-22.526184)">
     <path
-       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#440154;fill-opacity:1;stroke:#440154;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 134.9375,132.58035 -15.875,-17.3869 -18.98095,-8.79093 -9.095367,20.29788 21.272747,4.74603 -12.473216,33.2619 -8.693454,7.55952 7.181548,11.71727 L 127,170 Z"
        id="path821"
        inkscape:connector-curvature="0" />
@@ -205,7 +205,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:#ff4081;fill-opacity:1;stroke:#ff4081;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker4004);paint-order:fill markers stroke"
+       style="fill:#fde725;fill-opacity:1;stroke:#fde725;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker4004);paint-order:fill markers stroke"
        d="m 120.61763,110.1968 -4.72471,-9.63839"
        id="path3994"
        inkscape:connector-curvature="0" />
@@ -216,7 +216,7 @@
        id="circle842"
        style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.32600001;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke" />
     <path
-       style="fill:#ff4081;fill-opacity:1;stroke:#ff4081;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker3841);paint-order:fill markers stroke"
+       style="fill:#fde725;fill-opacity:1;stroke:#fde725;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker3841);paint-order:fill markers stroke"
        d="M 87.818524,128.82081 80.174175,126.0718"
        id="path3980"
        inkscape:connector-curvature="0" />
@@ -320,8 +320,8 @@
        d="M 87.818526,128.82081 120.61763,110.1968"
        style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.76499999;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke" />
     <path
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.76499999;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-       d="M 91.529524,126.72402 114.91767,113.48721"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.79;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       d="M 91.451028,126.76173 114.95276,113.41872"
        id="path876"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />

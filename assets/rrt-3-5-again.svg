@@ -26,8 +26,8 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="355.13125"
-     inkscape:cy="440.33399"
+     inkscape:cx="395.13125"
+     inkscape:cy="297.47685"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -50,7 +50,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -60,7 +60,13 @@
      id="layer1"
      transform="translate(-0.79917596,-46.226184)">
     <path
-       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path849"
+       d="M 21.835001,135.30193 90.214302,55.294094"
+       style="fill:none;fill-opacity:1;stroke:#fde725;stroke-width:0.66500002;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:1.99500015, 1.99500015000000008;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke" />
+    <path
+       style="fill:#440154;fill-opacity:1;stroke:#440154;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 134.9375,132.58035 -15.875,-17.3869 -18.98095,-8.79093 -9.095367,20.29788 21.272747,4.74603 -12.473216,33.2619 -8.693454,7.55952 7.181548,11.71727 L 127,170 Z"
        id="path821"
        inkscape:connector-curvature="0" />
@@ -120,14 +126,8 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
-       sodipodi:nodetypes="cc"
-       inkscape:connector-curvature="0"
-       id="path849"
-       d="M 21.835001,135.30193 90.214302,55.294094"
-       style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.66500002;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:1.99500015, 1.99500015;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke" />
-    <path
        sodipodi:type="star"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.66500002;stroke-miterlimit:4;stroke-dasharray:1.99500012, 1.99500012;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#fde725;fill-opacity:1;stroke:none;stroke-width:0.66500002;stroke-miterlimit:4;stroke-dasharray:1.99500012, 1.99500012000000004;stroke-dashoffset:0;stroke-opacity:1"
        id="path851"
        sodipodi:sides="4"
        sodipodi:cx="93.960884"

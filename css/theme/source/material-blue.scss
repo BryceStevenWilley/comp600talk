@@ -25,9 +25,13 @@ $headingColor: #FFF;
 $headingLetterSpacing: 0.0em;
 $headingTextShadow: none;
 $backgroundColor: #0091ea;
-$linkColor: #ff4081;
+
+$secondaryAccent: #440154;
+$tertiaryAccent: #fde725;
+
+$linkColor: $secondaryAccent; //#ff4081;
 $linkColorHover: lighten( $linkColor, 20% );
-$selectionBackgroundColor: #ff4081;
+$selectionBackgroundColor: $tertiaryAccent; //#ff4081;
 
 $headingLineHeight: 1.3;
 $headingFontWeight: bold;
