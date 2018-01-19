@@ -14,7 +14,7 @@
    viewBox="0 0 219.00698 177.28426"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   inkscape:version="0.92.2 (unknown)"
    sodipodi:docname="distance.svg">
   <defs
      id="defs2">
@@ -298,9 +298,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.5"
-     inkscape:cx="452.66209"
-     inkscape:cy="345.59443"
+     inkscape:zoom="22.627417"
+     inkscape:cx="196.12765"
+     inkscape:cy="172.74707"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -308,7 +308,7 @@
      inkscape:window-width="1324"
      inkscape:window-height="988"
      inkscape:window-x="470"
-     inkscape:window-y="0"
+     inkscape:window-y="24"
      inkscape:window-maximized="0"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -472,7 +472,7 @@
            id="path4623"
            inkscape:connector-curvature="0" />
         <rect
-           style="fill:#ff4081;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.404;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           style="fill:#fde725;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.404;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;opacity:0.99"
            id="rect4621"
            width="11.462866"
            height="0.46925154"
@@ -523,7 +523,7 @@
            height="47.706966"
            width="10.645401"
            id="rect5026"
-           style="fill:#ff4081;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.848;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+           style="fill:#fde725;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.848;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
         <path
            inkscape:connector-curvature="0"
            id="path5028"
@@ -575,7 +575,7 @@
            height="0.46925154"
            width="11.462866"
            id="rect1188"
-           style="fill:#ff4081;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.404;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+           style="fill:#fde725;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.404;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
         <path
            inkscape:connector-curvature="0"
            id="path1190"
@@ -615,7 +615,7 @@
            height="0.46925154"
            width="11.462866"
            id="rect1196"
-           style="fill:#ff4081;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.404;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+           style="fill:#fde725;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.404;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
         <path
            inkscape:connector-curvature="0"
            id="path1198"
@@ -651,7 +651,7 @@
            id="path1223"
            inkscape:connector-curvature="0" />
         <rect
-           style="fill:#ff4081;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.778;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           style="fill:#fde725;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.778;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            id="rect1225"
            width="10.715754"
            height="33.677322"
@@ -692,7 +692,7 @@
            id="path1238"
            inkscape:connector-curvature="0" />
         <rect
-           style="fill:#ff4081;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.699;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           style="fill:#fde725;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.699;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            id="rect1240"
            width="10.794415"
            height="20.955984"
