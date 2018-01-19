@@ -89,7 +89,7 @@
                     <section
                         data-state="header2"
                         data-background-image="assets/arm-0-0.svg"
-                        data-background-size="70i%">
+                        data-background-size="70%">
                     </section>
                     <section
                         data-state="header2"
@@ -197,6 +197,22 @@
                         </ul>
                     </div>
                 </section>
+                    <section data-state="header9">
+                        <style>.header9 header h2:after {content: "Example"; }</style>
+                        <div style="float: top; height: 100%;">
+                            <!--img style="max-height:350px; width: auto; background-color:rgba(0, 0, 0, 0.0); border:none; box-shadow:none;" src="assets/lab-b.png"></img-->
+                            <!--img style="max-height:350px; width: auto; background-color:rgba(0, 0, 0, 0.0); border:none; box-shadow:none;" src="assets/lab-e.png"></img-->
+                            <img style="max-height:350px; width: auto; background-color:rgba(0, 0, 0, 0.0); border:none; box-shadow:none;" src="assets/start.png"></img>
+                            <img style="max-height:350px; width: auto; background-color:rgba(0, 0, 0, 0.0); border:none; box-shadow:none;" src="assets/goal.png"></img>
+                        </div>
+                    </section>
+                    <section data-state="header9-2"
+                        data-background-video="assets/rrt-right-color-small.mp4"
+                        data-background-video-loop
+                        data-background-video-mute
+                        data-background-size="contain">
+                        <style>.header9-2 header h2:after {content: "Example: A Sampling Planner"; }</style>
+                    </section>
                 <section data-state="header6">
                     <style>.header6 header h2:after {content: "Optimization Planners"; }</style>
                     <section
@@ -260,6 +276,13 @@
                             </ul>
                     </div>
                 </section>
+                    <section data-state="header9-1"
+                        data-background-video="assets/stomp-right-color-small.mp4"
+                        data-background-video-loop
+                        data-background-video-muted
+                        data-background-size="contain">
+                        <style>.header9-1 header h2:after {content: "Example: An Optimization Planner"; }</style>
+                    </section>
                 <section data-state="header8">
                     <style>.header8 header h2:after {content: "Problem: Comparing Apples and Oranges"; }</style>
                     <p>Currently, no rigorous comparisons in the literature</p>
@@ -297,42 +320,25 @@
                       <style>.header8-1 header h2:after {content: "Collision Checking in Motion Planning";}</style>
                       <p>Usually done precisely using collision libraries (FCL, Bullet, etc)</p>
                       <p>Can be approximated using signed distance fields</p>
-                      <p>Approximating the robot using spheres makes getting collision information easier</p>
+                      <p>Approximating the robot using spheres makes getting collision information O(1)</p>
                     </div>
                     <div style="width:35%;float:right;">
-                        <img style="max-height:350px;float:right;"
-                            src="assets/robotsdf.png"
+                        <img style="max-height:250px;float:right;"
+                            class="plain"
+                            src="assets/no-spheres.png"
                             alt="TODO"></img>
                     </div>
-                    
+                    <div style="width:35%;float:right;">
+                        <img style="max-height:250px;float:right;"
+                            class="plain"
+                            src="assets/spheres.png"
+                            alt="TODO"></img>
+                    </div>
                 </section>
                 <section data-state="header9">
-                    <style>.header9 header h2:after {content: "Example"; }</style>
-                    <style>.header9-1 header h2:after {content: "Example: An Optimization Planner"; }</style>
-                    <style>.header9-2 header h2:after {content: "Example: A Sampling Planner"; }</style>
                     <style>.header9-5 header h2:after {content: "Results";}</style>
                     <style>.header9-3 header h2:after {content: "Results: Data"; }</style>
                     <style>.header9-4 header h2:after {content: "Results: When Optimizers fail"; }</style>
-                    <section data-state="header9">
-                        <div style="float: top; height: 100%;">
-                            <!--img style="max-height:350px; width: auto; background-color:rgba(0, 0, 0, 0.0); border:none; box-shadow:none;" src="assets/lab-b.png"></img-->
-                            <!--img style="max-height:350px; width: auto; background-color:rgba(0, 0, 0, 0.0); border:none; box-shadow:none;" src="assets/lab-e.png"></img-->
-                            <img style="max-height:350px; width: auto; background-color:rgba(0, 0, 0, 0.0); border:none; box-shadow:none;" src="assets/start.png"></img>
-                            <img style="max-height:350px; width: auto; background-color:rgba(0, 0, 0, 0.0); border:none; box-shadow:none;" src="assets/goal.png"></img>
-                        </div>
-                    </section>
-                    <section data-state="header9-2"
-                        data-background-video="assets/rrt-right-color-small.mp4"
-                        data-background-video-loop
-                        data-background-video-mute
-                        data-background-size="contain">
-                    </section>
-                    <section data-state="header9-1"
-                        data-background-video="assets/stomp-right-color-small.mp4"
-                        data-background-video-loop
-                        data-background-video-muted
-                        data-background-size="contain">
-                    </section>
                     <section data-state="header9-5">
                         <div style="float: top; height: 100%;">
                             <img style="max-height:350px; width: auto; background-color:rgba(0, 0, 0, 0.0); border:none; box-shadow:none;" src="assets/lab-b.png"></img>
