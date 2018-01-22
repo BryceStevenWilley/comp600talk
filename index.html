@@ -244,12 +244,12 @@
                          data-background-size="contain">
                     <style>.header9-1 header h2:after {content: "Example: An Optimization Planner"; }</style>
                 </section>
-                    <section data-state="header9-4"
-                        data-background-video="assets/chomp-weird.mp4"
+                    <section data-state="headerfail"
+                        data-background-video="assets/stomp-clip.mp4"
                         data-background-video-loop
                         data-background-video-muted
                         data-background-size="contain">
-                        <style>.header9-4 header h2:after {content: "Example: When Optimization fails"; }</style>
+                        <style>.headerfail header h2:after {content: "Example: When Optimization fails"; }</style>
                         <div style="width:30%;float:left;">
                             Only finds feasible path 20% of the time with larger column
                         </div>
@@ -259,24 +259,60 @@
                     <p>Currently, few rigorous comparisons in the literature</p>
                 </section>
                 <section data-state="header9">
-                    <style>.header9-5 header h2:after {content: "Experiments: example scene";}</style>
-                    <style>.header9-3 header h2:after {content: "Experiments: Data"; }</style>
+                    <section data-state="header9-8">
+                        <style>.header9-8 header h2:after {content: "Experiments: 8 scenes";}</style>
+                        <div style="float: top; height: 80%;">
+                            <!--img style="max-height:150px; width: auto; background-color:rgba(0, 0, 0, 0.0); border:none; box-shadow:none;" src="assets/image2.png"></img-->
+                            <img class="plain" style="max-height:150px; width: auto;" src="assets/image7.png"></img>
+                            <img class="plain" style="max-height:150px; width: auto;" src="assets/image12.png"></img>
+                            <img class="plain" style="max-height:150px; width: auto;" src="assets/lab-e.png"></img>
+                            <img class="plain" style="max-height:150px; width: auto;" src="assets/image29.png"></img>
+                        </div>
+                        <div>
+                            <p>Planners:</p>
+                            <ul>
+                              <li>Sampling: RRT-Connect, PRM, BIT*</li>
+                             <li>Optimization: TrajOpt, CHOMP, GPMP2</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section data-state="header9-4">
+                        <style>.header9-4 header h2:after {content: "Experiments: Solved";}</style>
+                        <div style="float:left; width:45%">
+                            <p class="fragment">TrajOpt = 6/8 scenes</p>
+                            <p class="fragment">CHOMP = 4/8 scenes</p>
+                            <p class="fragment">GPMP2 = 7/8 scenes</p>
+                        </div>
+                        <div class="fragment" style="float:right; width:55%">
+                            <p>RRT-Connect = 8/8 scenes</p>
+                            <p>PRM = 8/8 scenes, 87.5% of the tries</p>
+                            <p>BIT* = 8/8 scenes</p>
+                        </div>
+                    </section>
                     <section data-state="header9-5">
-                        <div style="float: top; height: 100%;">
+                        <style>.header9-5 header h2:after {content: "Experiments: example scene";}</style>
+                        <div style="float: top; height: 80%;">
                             <img style="max-height:350px; width: auto; background-color:rgba(0, 0, 0, 0.0); border:none; box-shadow:none;" src="assets/lab-b.png"></img>
                             <img style="max-height:350px; width: auto; background-color:rgba(0, 0, 0, 0.0); border:none; box-shadow:none;" src="assets/lab-e.png"></img>
                             <!--img style="max-height:350px; width: auto; background-color:rgba(0, 0, 0, 0.0); border:none; box-shadow:none;" src="assets/start.png"></img-->
                             <!--img style="max-height:350px; width: auto; background-color:rgba(0, 0, 0, 0.0); border:none; box-shadow:none;" src="assets/goal.png"></img-->
                         </div>
+                        <div>
+                            <p>Planners:</p>
+                            <ul>
+                              <li>Sampling: RRT-Connect, PRM, BIT*</li>
+                             <li>Optimization: TrajOpt, CHOMP, GPMP2</li>
+                            </ul>
+                        </div>
                     </section>
                     <section data-state="header9-3">
+                        <style>.header9-3 header h2:after {content: "Experiments: Resulting Path"; }</style>
                         <img class="plain" style="width: 45%; padding: 5px;" src="assets/planning-time.svg"></img>
                         <img class="plain" style="width: 45%; padding: 5px;" src="assets/distance.svg">
                         <aside class="notes">
                             * Performance
                             * Determinism
                         </aside>
-                        <p>4, 5, and 7 out of 8 scenes were solved by the Optimization Planners</p>
                     </section>
                 </section>
                 <section data-state="header5">
@@ -313,7 +349,7 @@
                     <div style="float: right; width: 45%">
                         <h4>Pros</h4>
                         <ul>
-                            <li>Fast! (5-10x by our experiments)</li>
+                            <li>5-10x Faster</li>
                             <li>Quality, smooth paths</li>
                         </ul>
                         <br/><br/>
@@ -327,8 +363,8 @@
                         </ul>
                     </div>
                 </section>
-                <section data-state="header8">
-                    <style>.header8 header h2:after {content: "Problem: Source of Performance"; }</style>
+                <section data-state="header8-p2">
+                    <style>.header8-p2 header h2:after {content: "Problem: Source of Performance"; }</style>
                     <p>Optimization planners do special 'tricks' to speed up planning</p>
                     <p>What really makes optimization planners faster?</p>
                 </section>
@@ -347,7 +383,7 @@
                     <div style="float:bottom;">
                             <img style="max-height:300px;width:auto;float:left;" 
                                  class="plain"
-                                 src="assets/cm_huge_46.png" 
+                                 src="assets/cm_huge_stl_46.png" 
                                  alt="A signed distance field with it's 3D slice"></img>
                         </div>
                 </section>
