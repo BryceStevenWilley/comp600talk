@@ -1,5 +1,6 @@
-/* global module:false */
-module.exports = function(grunt) {
+const sass =require('node-sass');
+
+module.exports = grunt => {
 	var port = grunt.option('port') || 8000;
 	var root = grunt.option('root') || '.';
 
@@ -86,10 +87,11 @@ module.exports = function(grunt) {
 					console: false,
 					unescape: false,
 					define: false,
-					exports: false
+					exports: false,
+                                        require: false
 				}
 			},
-			files: [ 'Gruntfile.js', 'js/reveal.js' ]
+			files: [ 'gruntfile.js', 'js/reveal.js' ]
 		},
 
 		connect: {
@@ -118,7 +120,7 @@ module.exports = function(grunt) {
 
 		watch: {
 			js: {
-				files: [ 'Gruntfile.js', 'js/reveal.js' ],
+				files: [ 'gruntfile.js', 'js/reveal.js' ],
 				tasks: 'js'
 			},
 			theme: {
@@ -145,12 +147,6 @@ module.exports = function(grunt) {
 			}
 		},
 
-		retire: {
-			js: ['js/reveal.js', 'lib/js/*.js', 'plugin/**/*.js'],
-			node: ['.'],
-			options: {}
-		}
-
 	});
 
 	// Dependencies
@@ -163,7 +159,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks( 'grunt-contrib-connect' );
 	grunt.loadNpmTasks( 'grunt-autoprefixer' );
 	grunt.loadNpmTasks( 'grunt-zip' );
-	grunt.loadNpmTasks( 'grunt-retire' );
 
 	// Default task
 	grunt.registerTask( 'default', [ 'css', 'js' ] );
