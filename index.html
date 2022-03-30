@@ -423,23 +423,25 @@
         </div>
 
         <script src="dist/reveal.js"></script>
+        <script src="plugin/highlight/highlight.js"></script>
+        <script src="plugin/markdown/markdown.js"></script>
+        <script src="plugin/markdown/marked.js"></script>
+        <script src="plugin/notes/notes.js"></script>
+        <script src="plugin/math/math.js"></script>
 
         <script>
             // More info about config & dependencies:
             // - https://github.com/hakimel/reveal.js#configuration
             // - https://github.com/hakimel/reveal.js#dependencies
             Reveal.initialize({
+                math: {
+		              mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+		              config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+	              },
+                plugins: [ RevealHighlight, RevealMarkdown, RevealNotes, RevealMath ],
                 dependencies: [
                     { src: 'plugin/markdown/marked.js' },
-                    { src: 'plugin/markdown/markdown.js' },
-                    { src: 'plugin/notes/notes.js', async: true },
-                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                    { src: 'plugin/math/math.js', async: true}
                 ],
-                math: {
-		            mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
-		            config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
-	            },
                 transition: 'none',
                 transitionSpeed: 'fast',
                 controls: true,
