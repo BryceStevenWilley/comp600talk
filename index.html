@@ -32,9 +32,9 @@
                     <img class="plain" style="max-height: 130px;"
                          src="assets/RiceLogo-small.png" alt="The Rice University logo"></img>
                     <aside class="notes">
-                        // (if no introduction) Hi, my name is Bryce, MS student of Professor Kavraki.
-                        "Making a robot move is not only complicated, but there are many different approaches you can take. My research focuses on understanding
-                         the fundamental differences of these approaches in order to find the best fit for each."
+                        Hi, my name is Bryce, MS student of Professor Kavraki.
+                        Making a robot move is not only complicated, but there are many different approaches you can take. My research focuses on understanding
+                         the fundamental differences of these approaches in order to find the best fit for each.
                     </aside>
                 </section>
                 <section data-state="header1">
@@ -302,8 +302,11 @@
                         <img class="plain" style="width: 45%; padding: 5px;" src="assets/planning-time.svg"></img>
                         <img class="plain" style="width: 45%; padding: 5px;" src="assets/distance.svg">
                         <aside class="notes">
-                            * Performance
-                            * Determinism
+                            The trade off here is between:
+                            <ul>
+                            <li>Performance</li>
+                            <li>Determinism</li>
+                            </ul>
                         </aside>
                     </section>
                 </section>
@@ -414,9 +417,11 @@
                     <p>Possible sources of performance in optimization planners is under investigation</p>
                     <p>Best motion planner is dependent on your specifications</p>
                     <aside class="notes">
-                        * No one size fits all
-                        * Our research will help codify these tradeoffs between opt and sampling planners, and
+                        <ul>
+                        <li>No one size fits all</li>
+                        <li>Our research will help codify these tradeoffs between opt and sampling planners, and
                           might reveal key insights into efficient planning for robotics.
+                        </li>
                     </aside>
                 </section>
             </div>
@@ -442,6 +447,7 @@
                 dependencies: [
                     { src: 'plugin/markdown/marked.js' },
                 ],
+                showNotes: true,
                 transition: 'none',
                 transitionSpeed: 'fast',
                 controls: true,
